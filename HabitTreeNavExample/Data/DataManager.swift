@@ -8,8 +8,8 @@
 import Foundation
 
 struct Tree {
-    // CS: There are referred to as "tables" or "models" in database vernacular
-    // Make sure each models have ids
+    // CS: There are referred to as "models"
+    // Make sure each model has an id property
     var id: Int
     var name: String
     var actions: [Action: Bool]
@@ -23,7 +23,7 @@ struct Action: Hashable {
 
 class DataManager {
     
-    // CS: This is referred to as a "singleton", a class that is instatiated ONE time only in the lifecycle of the application
+    // CS: This is referred to as a "singleton", a class that is instatiated only once in the lifecycle of an application
     static let shared = DataManager()
     let store = UserDefaults.standard
     
